@@ -33,78 +33,41 @@
             margin-bottom: 20px;
         }
 
-        /* Navigation Bar */
-        .navbar {
-            background-color: #104e8b; /* Navy blue */
-            color: #fff;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
+        /* Gallery Section */
+        .gallery-section {
+            margin: 20px;
         }
 
-        .navbar a {
-            color: #ffd700; /* Gold accent */
-            text-decoration: none;
-            padding: 10px 15px;
-            font-size: 1.1rem;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        .places-section, .gallery-section {
-            margin-top: 20px;
-        }
-
-        .places-section h2, .gallery-section h2 {
+        .gallery-section h2 {
             color: #104e8b;
             margin-bottom: 15px;
+            text-align: center;
         }
 
-        .place-card {
-            background-color: #ffffff;
-            border: 1px solid #dcdcdc;
-            border-radius: 8px;
-            margin: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex-basis: calc(33.33% - 20px);
-        }
-
-        .place-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        /* Gallery Section */
         .gallery {
             display: flex;
-            gap: 10px;
-            overflow-x: scroll;
-            padding: 10px;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
         }
 
         .gallery img {
-            width: 200px;
+            width: 100%;
             height: auto;
             border-radius: 8px;
+            max-width: 300px;
             transition: transform 0.3s;
         }
 
         .gallery img:hover {
             transform: scale(1.05);
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .gallery img {
+                max-width: 100%;
+            }
         }
 
         /* Footer */
@@ -124,52 +87,23 @@
         <h1>Welcome to Saint John, New Brunswick</h1>
     </section>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="https://saintjohn.ironiksv1.webredirect.org" target="_blank">CB Radio</a>
-        <a href="#places">Places to Visit</a>
-        <a href="#gallery">Gallery</a>
-    </nav>
-
-    <!-- Main Container -->
-    <div class="container">
-
-        <!-- Places to Visit Section -->
-        <div class="places-section" id="places">
-            <h2>Places to Visit</h2>
-            <div style="display: flex; flex-wrap: wrap;">
-                <!-- Place Card Example -->
-                <div class="place-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Saint_John%2C_NB%2C_skyline_at_dusk12.jpg/288px-Saint_John%2C_NB%2C_skyline_at_dusk12.jpg" alt="Saint John Skyline at Dusk">
-                    <h3>Saint John Skyline</h3>
-                    <p>Enjoy the picturesque view of Saint John's skyline at dusk.</p>
-                </div>
-
-                <div class="place-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Imperial_Theatre_2024_%28cropped%29.jpg/150px-Imperial_Theatre_2024_%28cropped%29.jpg" alt="Imperial Theatre">
-                    <h3>Imperial Theatre</h3>
-                    <p>Visit the historic Imperial Theatre, a landmark of Saint John.</p>
-                </div>
-
-                <div class="place-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/June_2009_Reversing_Falls_Bridge.jpg/134px-June_2009_Reversing_Falls_Bridge.jpg" alt="Reversing Falls Bridge">
-                    <h3>Reversing Falls Bridge</h3>
-                    <p>Experience the natural wonder of the Reversing Falls.</p>
-                </div>
-            </div>
+    <!-- Gallery Section -->
+    <div class="gallery-section" id="gallery">
+        <h2>Saint John Gallery</h2>
+        <div class="gallery">
+            <!-- Image URLs from your list -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Saint_John%2C_NB%2C_skyline_at_dusk12.jpg/288px-Saint_John%2C_NB%2C_skyline_at_dusk12.jpg" alt="Skyline at Dusk">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Imperial_Theatre_2024_%28cropped%29.jpg/150px-Imperial_Theatre_2024_%28cropped%29.jpg" alt="Imperial Theatre">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Douglas_Ave_017.jpg/134px-Douglas_Ave_017.jpg" alt="Douglas Ave">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/June_2009_Reversing_Falls_Bridge.jpg/134px-June_2009_Reversing_Falls_Bridge.jpg" alt="Reversing Falls Bridge">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Saint_John_City_Market_%2821714657379%29.jpg/150px-Saint_John_City_Market_%2821714657379%29.jpg" alt="City Market">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Saint_John_New_Brunswick_street_scape%2C_Germain_St..jpg/134px-Saint_John_New_Brunswick_street_scape%2C_Germain_St..jpg" alt="Germain St. Street Scape">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/BANDSTAND.JPG/150px-BANDSTAND.JPG" alt="Bandstand">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/City_of_Saint_John_logo.jpg/100px-City_of_Saint_John_logo.jpg" alt="City Logo">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipMb-Kbez-3s-tEcCZc4xnEppg4q0cZ8ZwIrWpwK=w540-h312-n-k-no" alt="Saint John View">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipO5NcrjR1MLdTDVOnu5iVK-LdGrL98bpG3cZBbS=w540-h312-n-k-no" alt="Saint John View 2">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipPLQatah_65Aj36_1-yLizaq3VzRE1IbYa8K8Me=w540-h312-n-k-no" alt="Saint John View 3">
         </div>
-
-        <!-- Gallery Section -->
-        <div class="gallery-section" id="gallery">
-            <h2>Saint John Gallery</h2>
-            <div class="gallery">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Saint_John_City_Market_%2821714657379%29.jpg/150px-Saint_John_City_Market_%2821714657379%29.jpg" alt="City Market">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Saint_John_New_Brunswick_street_scape%2C_Germain_St..jpg/134px-Saint_John_New_Brunswick_street_scape%2C_Germain_St..jpg" alt="Germain Street">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/SaintJohnMarketExterior.jpg/220px-SaintJohnMarketExterior.jpg" alt="Saint John Market">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Imperial_Theatre%2C_Saint_John%28IMG_9955%29.JPG/133px-Imperial_Theatre%2C_Saint_John%28IMG_9955%29.JPG" alt="Imperial Theatre Interior">
-            </div>
-        </div>
-
     </div>
 
     <!-- Footer -->
