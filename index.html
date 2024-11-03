@@ -1,175 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Saint John, New Brunswick</title>
-  <style>
-    /* Basic reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Saint John, New Brunswick</title>
+    <style>
+        /* Basic reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* Saint John Color Scheme */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff; /* Light blue-gray */
-      color: #1e2a39; /* Dark blue for contrast */
-    }
+        /* Saint John Color Scheme */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue-gray */
+            color: #1e2a39; /* Dark blue for contrast */
+        }
 
-    /* Navigation Bar */
-    .navbar {
-      background-color: #104e8b; /* Navy blue */
-      color: #fff;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        /* Banner Image */
+        .banner {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Stjohnpanoramo.jpg/1800px-Stjohnpanoramo.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-    .navbar a {
-      color: #ffd700; /* Gold accent */
-      text-decoration: none;
-      padding: 10px 15px;
-      font-size: 1.1rem;
-    }
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
 
-    .navbar a:hover {
-      text-decoration: underline;
-    }
+        /* Navigation Bar */
+        .navbar {
+            background-color: #104e8b; /* Navy blue */
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
 
-    /* Main Content */
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 20px;
-    }
+        .navbar a {
+            color: #ffd700; /* Gold accent */
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1.1rem;
+        }
 
-    .welcome-section {
-      text-align: center;
-      padding: 20px;
-      background-color: #e6f2ff;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
 
-    .places-section, .gallery-section {
-      margin-top: 20px;
-    }
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
 
-    .places-section h2, .gallery-section h2 {
-      color: #104e8b;
-      margin-bottom: 15px;
-    }
+        .places-section, .gallery-section {
+            margin-top: 20px;
+        }
 
-    .place-card {
-      background-color: #ffffff;
-      border: 1px solid #dcdcdc;
-      border-radius: 8px;
-      margin: 10px;
-      padding: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      flex-basis: calc(33.33% - 20px);
-    }
+        .places-section h2, .gallery-section h2 {
+            color: #104e8b;
+            margin-bottom: 15px;
+        }
 
-    .place-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
+        .place-card {
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-basis: calc(33.33% - 20px);
+        }
 
-    /* Gallery Section */
-    .gallery {
-      display: flex;
-      gap: 10px;
-      overflow-x: scroll;
-      padding: 10px;
-    }
+        .place-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
 
-    .gallery img {
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            gap: 10px;
+            overflow-x: scroll;
+            padding: 10px;
+        }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      background-color: #104e8b;
-      color: #ffffff;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #104e8b;
+            color: #ffffff;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div><strong>Explore Saint John</strong></div>
-    <div>
-      <a href="#">Home</a>
-      <a href="https://saintjohn.ironiksv1.webredirect.org" target="_blank">CB Radio</a>
-      <a href="#places">Places to Visit</a>
-      <a href="#gallery">Gallery</a>
-    </div>
-  </nav>
+    <!-- Banner Image Section -->
+    <section class="banner">
+        <h1>Welcome to Saint John, New Brunswick</h1>
+    </section>
 
-  <!-- Main Container -->
-  <div class="container">
-    
-    <!-- Welcome Section -->
-    <div class="welcome-section">
-      <h1>Welcome to Saint John, New Brunswick</h1>
-      <p>Discover the beauty, history, and vibrant community of Saint John, Canada’s oldest incorporated city. Whether you’re visiting for the stunning harbor views, the historic architecture, or the lively CB radio community, there’s something here for everyone.</p>
-    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="https://saintjohn.ironiksv1.webredirect.org" target="_blank">CB Radio</a>
+        <a href="#places">Places to Visit</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
 
-    <!-- Places to Visit Section -->
-    <div class="places-section" id="places">
-      <h2>Places to Visit</h2>
-      <div style="display: flex; flex-wrap: wrap;">
-        <!-- Place Card Example -->
-        <div class="place-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saint_John_Harbour.jpg/1280px-Saint_John_Harbour.jpg" alt="Saint John Harbor">
-          <h3>Saint John Harbor</h3>
-          <p>Explore the bustling harbor, where you can catch a glimpse of the city’s maritime heritage.</p>
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Places to Visit Section -->
+        <div class="places-section" id="places">
+            <h2>Places to Visit</h2>
+            <div style="display: flex; flex-wrap: wrap;">
+                <!-- Place Card Example -->
+                <div class="place-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Saint_John%2C_NB%2C_skyline_at_dusk12.jpg/288px-Saint_John%2C_NB%2C_skyline_at_dusk12.jpg" alt="Saint John Skyline at Dusk">
+                    <h3>Saint John Skyline</h3>
+                    <p>Enjoy the picturesque view of Saint John's skyline at dusk.</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Imperial_Theatre_2024_%28cropped%29.jpg/150px-Imperial_Theatre_2024_%28cropped%29.jpg" alt="Imperial Theatre">
+                    <h3>Imperial Theatre</h3>
+                    <p>Visit the historic Imperial Theatre, a landmark of Saint John.</p>
+                </div>
+
+                <div class="place-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/June_2009_Reversing_Falls_Bridge.jpg/134px-June_2009_Reversing_Falls_Bridge.jpg" alt="Reversing Falls Bridge">
+                    <h3>Reversing Falls Bridge</h3>
+                    <p>Experience the natural wonder of the Reversing Falls.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="place-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Reversing_Falls_Saint_John.jpg/1280px-Reversing_Falls_Saint_John.jpg" alt="Reversing Falls">
-          <h3>Reversing Falls Rapids</h3>
-          <p>Witness the incredible Reversing Falls, where the tides of the Bay of Fundy reverse the flow of the Saint John River.</p>
+        <!-- Gallery Section -->
+        <div class="gallery-section" id="gallery">
+            <h2>Saint John Gallery</h2>
+            <div class="gallery">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Saint_John_City_Market_%2821714657379%29.jpg/150px-Saint_John_City_Market_%2821714657379%29.jpg" alt="City Market">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Saint_John_New_Brunswick_street_scape%2C_Germain_St..jpg/134px-Saint_John_New_Brunswick_street_scape%2C_Germain_St..jpg" alt="Germain Street">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/SaintJohnMarketExterior.jpg/220px-SaintJohnMarketExterior.jpg" alt="Saint John Market">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Imperial_Theatre%2C_Saint_John%28IMG_9955%29.JPG/133px-Imperial_Theatre%2C_Saint_John%28IMG_9955%29.JPG" alt="Imperial Theatre Interior">
+            </div>
         </div>
 
-        <div class="place-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/King%27s_Square_Saint_John_NB.jpg/1280px-King%27s_Square_Saint_John_NB.jpg" alt="King's Square">
-          <h3>King’s Square</h3>
-          <p>Relax in King’s Square, a historic park in the heart of Uptown Saint John.</p>
-        </div>
-      </div>
     </div>
 
-    <!-- Gallery Section -->
-    <div class="gallery-section" id="gallery">
-      <h2>Saint John Gallery</h2>
-      <div class="gallery">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saint_John_Harbour.jpg/1280px-Saint_John_Harbour.jpg" alt="Saint John Image 1">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Reversing_Falls_Saint_John.jpg/1280px-Reversing_Falls_Saint_John.jpg" alt="Saint John Image 2">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/King%27s_Square_Saint_John_NB.jpg/1280px-King%27s_Square_Saint_John_NB.jpg" alt="Saint John Image 3">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Saint_John_Market_Interior.jpg/1280px-Saint_John_Market_Interior.jpg" alt="Saint John Market">
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2024 Explore Saint John - All rights reserved.
-  </footer>
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Explore Saint John - All rights reserved.
+    </footer>
 
 </body>
 </html>
