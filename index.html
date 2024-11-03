@@ -1,188 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Saint John, New Brunswick</title>
-    <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Saint John, New Brunswick</title>
+  <style>
+    /* Basic reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Styling for the main page */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+    /* Saint John Color Scheme */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff; /* Light blue-gray */
+      color: #1e2a39; /* Dark blue for contrast */
+    }
 
-        h1 {
-            font-size: 3rem;
-            color: #ffd700;
-            margin-bottom: 10px;
-            animation: fadeIn 1s ease-in-out;
-        }
+    /* Navigation Bar */
+    .navbar {
+      background-color: #104e8b; /* Navy blue */
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
+    .navbar a {
+      color: #ffd700; /* Gold accent */
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 1.1rem;
+    }
 
-        /* Cycling Info Box */
-        .info-box {
-            background-color: #333;
-            font-size: 1.2rem;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            color: #1e90ff;
-            font-weight: bold;
-            animation: fadeIn 2s ease-in-out infinite alternate;
-        }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
 
-        /* Animations */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
 
-        /* Slideshow */
-        .slideshow img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: opacity 1s ease-in-out;
-        }
+    .welcome-section {
+      text-align: center;
+      padding: 20px;
+      background-color: #e6f2ff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-        /* CB Radio Button */
-        .cb-radio a {
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            color: #ffffff;
-            background-color: #1e90ff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-            margin-top: 10px;
-        }
+    .places-section, .gallery-section {
+      margin-top: 20px;
+    }
 
-        .cb-radio a:hover {
-            background-color: #0066cc;
-        }
-    </style>
+    .places-section h2, .gallery-section h2 {
+      color: #104e8b;
+      margin-bottom: 15px;
+    }
+
+    .place-card {
+      background-color: #ffffff;
+      border: 1px solid #dcdcdc;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-basis: calc(33.33% - 20px);
+    }
+
+    .place-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      display: flex;
+      gap: 10px;
+      overflow-x: scroll;
+      padding: 10px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #104e8b;
+      color: #ffffff;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Explore Saint John, New Brunswick</h1>
-    <div class="container">
-        
-        <!-- Cycling Info Box -->
-        <div class="info-box" id="infoBox">Loading Saint John Highlights...</div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div><strong>Explore Saint John</strong></div>
+    <div>
+      <a href="#">Home</a>
+      <a href="https://saintjohn.ironiksv1.webredirect.org" target="_blank">CB Radio</a>
+      <a href="#places">Places to Visit</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+  </nav>
 
-        <!-- Photo Slideshow -->
-        <div class="slideshow" id="slideshow">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saint_John_Harbour.jpg/1280px-Saint_John_Harbour.jpg" alt="Saint John Harbor">
-        </div>
-
-        <!-- CB Radio Section -->
-        <div class="cb-radio">
-            <h2>CB Radio Community</h2>
-            <p>Join the Saint John CB Radio community to connect with local enthusiasts and explore CB radio communication across the region.</p>
-            <a href="https://saintjohn.ironiksv1.webredirect.org" target="_blank">Visit CB Radio Page</a>
-        </div>
-
-        <!-- Real-Time Data Sections (Weather, ISS Passes, Sun & Moon Info) -->
-        <div id="weather" class="info-box">Loading weather...</div>
-        <div id="issPasses" class="info-box">Loading ISS pass data...</div>
-        <div id="sunMoon" class="info-box">Loading sun and moon information...</div>
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <h1>Welcome to Saint John, New Brunswick</h1>
+      <p>Discover the beauty, history, and vibrant community of Saint John, Canada’s oldest incorporated city. Whether you’re visiting for the stunning harbor views, the historic architecture, or the lively CB radio community, there’s something here for everyone.</p>
     </div>
 
-    <script>
-        // Cycling information about Saint John
-        const infoBox = document.getElementById('infoBox');
-        const saintJohnInfo = [
-            "Saint John is the oldest incorporated city in Canada, founded in 1785.",
-            "Known for the Reversing Falls, a unique tidal phenomenon.",
-            "Saint John has a rich history in shipbuilding and trade.",
-            "Home to Rockwood Park, one of the largest urban parks in Canada.",
-            "Enjoy the vibrant Uptown with its historic buildings and modern amenities."
-        ];
+    <!-- Places to Visit Section -->
+    <div class="places-section" id="places">
+      <h2>Places to Visit</h2>
+      <div style="display: flex; flex-wrap: wrap;">
+        <!-- Place Card Example -->
+        <div class="place-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saint_John_Harbour.jpg/1280px-Saint_John_Harbour.jpg" alt="Saint John Harbor">
+          <h3>Saint John Harbor</h3>
+          <p>Explore the bustling harbor, where you can catch a glimpse of the city’s maritime heritage.</p>
+        </div>
 
-        let infoIndex = 0;
-        setInterval(() => {
-            infoBox.textContent = saintJohnInfo[infoIndex];
-            infoIndex = (infoIndex + 1) % saintJohnInfo.length;
-        }, 4000);
+        <div class="place-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Reversing_Falls_Saint_John.jpg/1280px-Reversing_Falls_Saint_John.jpg" alt="Reversing Falls">
+          <h3>Reversing Falls Rapids</h3>
+          <p>Witness the incredible Reversing Falls, where the tides of the Bay of Fundy reverse the flow of the Saint John River.</p>
+        </div>
 
-        // Photo Slideshow
-        const slideshow = document.getElementById('slideshow');
-        const photos = [
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saint_John_Harbour.jpg/1280px-Saint_John_Harbour.jpg",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/King%27s_Square_Saint_John_NB.jpg/1280px-King%27s_Square_Saint_John_NB.jpg",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Reversing_Falls_Saint_John.jpg/1280px-Reversing_Falls_Saint_John.jpg"
-        ];
+        <div class="place-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/King%27s_Square_Saint_John_NB.jpg/1280px-King%27s_Square_Saint_John_NB.jpg" alt="King's Square">
+          <h3>King’s Square</h3>
+          <p>Relax in King’s Square, a historic park in the heart of Uptown Saint John.</p>
+        </div>
+      </div>
+    </div>
 
-        let photoIndex = 0;
-        setInterval(() => {
-            slideshow.innerHTML = `<img src="${photos[photoIndex]}" alt="Saint John Scenery">`;
-            photoIndex = (photoIndex + 1) % photos.length;
-        }, 5000);
+    <!-- Gallery Section -->
+    <div class="gallery-section" id="gallery">
+      <h2>Saint John Gallery</h2>
+      <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saint_John_Harbour.jpg/1280px-Saint_John_Harbour.jpg" alt="Saint John Image 1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Reversing_Falls_Saint_John.jpg/1280px-Reversing_Falls_Saint_John.jpg" alt="Saint John Image 2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/King%27s_Square_Saint_John_NB.jpg/1280px-King%27s_Square_Saint_John_NB.jpg" alt="Saint John Image 3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Saint_John_Market_Interior.jpg/1280px-Saint_John_Market_Interior.jpg" alt="Saint John Market">
+      </div>
+    </div>
 
-        // Real-Time Data Fetching Functions
-        async function fetchWeather() {
-            try {
-                const response = await fetch('https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=Saint John');
-                const data = await response.json();
-                document.getElementById('weather').textContent = `Saint John Weather: ${data.current.temp_c}°C, ${data.current.condition.text}`;
-            } catch (error) {
-                document.getElementById('weather').textContent = 'Failed to load weather data.';
-            }
-        }
+  </div>
 
-        async function fetchISSPasses() {
-            try {
-                const response = await fetch('https://api.n2yo.com/rest/v1/satellite/visualpasses/25544/45.2733/-66.0633/0/5/300/&apiKey=YOUR_API_KEY');
-                const data = await response.json();
-                document.getElementById('issPasses').textContent = `Next ISS pass: ${new Date(data.passes[0].startUTC * 1000).toLocaleString()}`;
-            } catch (error) {
-                document.getElementById('issPasses').textContent = 'Failed to load ISS pass data.';
-            }
-        }
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Explore Saint John - All rights reserved.
+  </footer>
 
-        async function fetchSunMoonInfo() {
-            try {
-                const response = await fetch('https://api.weatherapi.com/v1/astronomy.json?key=YOUR_API_KEY&q=Saint John');
-                const data = await response.json();
-                document.getElementById('sunMoon').textContent = `Sunrise: ${data.astronomy.astro.sunrise}, Sunset: ${data.astronomy.astro.sunset}, Moon phase: ${data.astronomy.astro.moon_phase}`;
-            } catch (error) {
-                document.getElementById('sunMoon').textContent = 'Failed to load sun and moon information.';
-            }
-        }
-
-        // Update data every minute
-        setInterval(fetchWeather, 60000);
-        setInterval(fetchISSPasses, 60000);
-        setInterval(fetchSunMoonInfo, 60000);
-
-        // Initial load
-        fetchWeather();
-        fetchISSPasses();
-        fetchSunMoonInfo();
-    </script>
 </body>
 </html>
